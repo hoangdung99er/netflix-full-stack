@@ -1,0 +1,17 @@
+.homepage{
+    flex : 4;
+    overflow: hidden;
+}
+
+.homeWidget{
+    display: flex;
+    margin : 20px;
+}
+
+@media only screen and (max-width : 900px)  {
+    .homeWidget{
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+    }
+}

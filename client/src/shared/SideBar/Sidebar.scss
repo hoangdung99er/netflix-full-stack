@@ -1,0 +1,47 @@
+.side-drawer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 35vw;
+  height: 100vh;
+  z-index: 999;
+  background: var(--main-color);
+  animation: 0.5s ease-in-out alternate leftToRight;
+  opacity: 0.8;
+}
+
+.side-drawer::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 35vw;
+  height: 100vh;
+  z-index: 999;
+  background: var(--main-color);
+  animation: 0.5s ease-in-out alternate rightToLeft;
+  opacity: 0;
+}
+
+.toggleTransformClose{
+  animation: 0.5s ease-in-out alternate rightToLeft;
+  opacity: 0;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

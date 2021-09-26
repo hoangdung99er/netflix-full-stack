@@ -1,0 +1,294 @@
+@import "../../App.scss";
+
+.sidebar__List {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.sidebar__Item {
+  padding: 20px 0;
+}
+
+a {
+  color: inherit;
+}
+
+.navbar {
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 800;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  transition: all 0.3s linear;
+  &.scrolled {
+    background-color: var(--main-color);
+    transition: all 0.3s linear;
+  }
+
+  .container {
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    @include mobile {
+      padding: 0px;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+
+      .navbarIcon {
+        display: none;
+      }
+
+      @include mobile {
+        .navbarIcon {
+          display: block;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+
+      img {
+        height: 70px;
+        margin-right: 40px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      span {
+        margin-right: 20px;
+        cursor: pointer;
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        padding-right: 10px;
+      }
+
+      .textImg {
+        margin-right: 10px;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      @include mobile {
+        .textImg {
+          display: none;
+        }
+      }
+
+      @include tablet {
+        .textImg {
+          display: none;
+        }
+      }
+      .iconNoti {
+        display: none;
+        position: relative;
+
+        .iconBadge {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+          border-radius: 50%;
+          top: 0px;
+          right: 15px;
+          border: 1px solid black;
+        }
+      }
+
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+      }
+
+      .profile {
+        @include tablet {
+          display: none;
+        }
+        .option {
+          display: none;
+          background-color: var(--main-color);
+          border-radius: 5px;
+        }
+
+        span {
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .option {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-right: 10px;
+
+  .btn-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    color: white;
+    z-index: 100;
+    background: transparent;
+    pointer-events: painted;
+
+    &:focus ~ .input-search {
+      width: 250px;
+      border-radius: 5px;
+      background-color: gray;
+      border-bottom: 1px solid white;
+      transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+    }
+  }
+
+  .movieSearchContainer {
+    animation: 0.5s ease-in-out alternate topToBottom;
+    width: 300px;
+    max-height: 350px;
+    height: fit-content;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 35px;
+    right: 0;
+    background-color: black;
+    border-radius: 5px;
+
+    .item-movie {
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 300px;
+      color: black;
+      background-color: rgb(226, 225, 225);
+
+      .img_movie {
+        width: 80px;
+        margin-right: 10px;
+        height: 80px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+    }
+
+    .movieDesc {
+      display: -webkit-box;
+      overflow: hidden;
+      width: 200px;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .input-search {
+    width: 50px;
+    border-style: none;
+    background-color: black;
+    padding: 10px;
+    font-size: 18px;
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    outline: none;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    padding-right: 40px;
+    color: #fff;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
+
+    &:focus {
+      width: 250px;
+      border-radius: 5px;
+      background-color: grey;
+      border-bottom: 1px solid white;
+      transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+    }
+  }
+
+  .profileResposive {
+    .optionResponsive {
+      display: none;
+      background-color: var(--main-color);
+      border-radius: 5px;
+    }
+    span {
+      padding: 10px;
+      cursor: pointer;
+    }
+    .isClick {
+      flex-direction: column;
+      position: absolute;
+      top: 30px;
+      left: -30px;
+
+      @include tablet {
+        display: flex;
+      }
+    }
+  }
+}
+
+@keyframes topToBottom {
+  from {
+    transform: translateY(-8%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

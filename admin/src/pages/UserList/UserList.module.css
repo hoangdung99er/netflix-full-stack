@@ -1,0 +1,53 @@
+.userList{
+    flex : 4
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.userImg{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.passwordContainer{
+    position : relative;
+    width : 140px;
+}
+
+.passwordContainer>input{
+    border: none;
+}
+
+.passwordContainer>input:disabled{
+    cursor: not-allowed;    
+}
+
+.passwordShow{
+    position: absolute;
+    top : 16px;
+    font-size: 18px !important;
+    right : 0;
+    cursor: pointer;
+}
+
+.userListEdit{
+    border: none;
+    border-radius: 10px;
+    padding : 5px 10px;
+    background-color: #3bb077;
+    color : white;
+    cursor: pointer;
+    margin-right: 20px;
+    outline : none;
+}
+
+.buttonDelete{
+    color: red;
+    cursor: pointer;
+}

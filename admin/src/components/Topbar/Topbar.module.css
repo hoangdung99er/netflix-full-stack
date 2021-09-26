@@ -1,0 +1,129 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.toggleIcon{
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .topbar {
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 100px;
+  }
+
+  .sidebarTitle {
+    font-size: 26px;
+    margin: 10px 10px;
+  }
+
+  .sidebarList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .sidebarItem {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .logo {
+    display: none;
+  }
+
+  .sidebarTitle {
+    font-size: 18px;
+    margin: 10px 10px;
+  }
+
+  .sidebarItem {
+    margin: 5px 0;
+    font-size: 15px;
+  }
+}
+
+.options {
+  display: none;
+  background-color: gray;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.optionText {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.options.isClick {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  color: darkblue;
+  cursor: pointer;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.topbarIconContainer {
+  position: relative;
+  margin-right: 15px;
+}
+
+.topIconBagde {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.topAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  object-fit: cover;
+}

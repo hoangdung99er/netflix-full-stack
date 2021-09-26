@@ -1,0 +1,38 @@
+.productList{
+    flex: 4;
+}
+
+@media only screen and (max-width: 910px) {
+    .productList{
+        width : 50%
+    }
+}
+
+.product{
+    display: flex;
+    align-items: center;
+}
+
+.productImg{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.productListEdit{
+    border: none;
+    border-radius: 10px;
+    padding : 5px 10px;
+    background-color: #3bb077;
+    color : white;
+    cursor: pointer;
+    margin-right: 20px;
+    outline : none;
+}
+
+.buttonDelete{
+    color: red;
+    cursor: pointer;
+}

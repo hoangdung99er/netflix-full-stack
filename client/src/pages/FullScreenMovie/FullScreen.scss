@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.fullscreen{
+    width: 100vw;
+    height: 100vh;
+
+    .back{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top : 10px;
+        left : 10px;
+        color: white;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .video{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
